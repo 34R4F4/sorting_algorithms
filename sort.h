@@ -3,6 +3,7 @@
 
 /**== Headears ==*/
 #include <stdlib.h>
+#include <stdio.h>
 
 /**== Data Types ==*/
 /**

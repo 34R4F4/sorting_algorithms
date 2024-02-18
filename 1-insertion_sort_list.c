@@ -22,13 +22,13 @@ void swap_node(listint_t **h, listint_t **n1, listint_t *n2)
 }
 
 /**
- * insert_sort_list - Sort a doubly linked list to integer
+ * insertion_sort_list - Sort a doubly linked list to integer
  *                       using the insert sort algorithm.
  * @list: pointer to head of doubly-linked list of integer.
  *
  * Description: Print the list after each swap.
  */
-void insert_sort_list(listint_t **list)
+void insertion_sort_list(listint_t **list)
 {
 	listint_t *iter, *insert, *tmp;
 

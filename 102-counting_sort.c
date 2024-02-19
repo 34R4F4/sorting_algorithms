@@ -16,7 +16,7 @@ void *M_alloc(unsigned int elemN, unsigned int size)
 		return ('\0');
 
 	Buffer = malloc(elemN * size);
-	if (Buffer == '\0')
+	if (Buffer == NULL)
 		return ('\0');
 	for (i = 0; i < (elemN * size); i++)
 		Buffer[i] = '\0';

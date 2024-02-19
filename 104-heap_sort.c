@@ -54,7 +54,7 @@ void heap_sort(int *array, size_t size)
 {
 	int i;
 	/* Validate input conditions */
-	if (array == '\0' || size < 2)
+	if (!array || size < 2)
 		return;	/* Handle invalid input gracefully (e.g., log error) */
 
 	/* Build a max-heap from the entire array in a bottom-up manner */

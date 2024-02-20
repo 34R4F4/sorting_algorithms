@@ -1,15 +1,15 @@
 #include "sort.h"
 #include <stdio.h>
+
 /**
- * *swap_prev_node - swap node to previous one
- * @Node: current node
- * @List: node list
- * Return: return pointer to node which enter it
+ * swap_prev_node - Swaps a node with its previous one in a linked list.
+ * @Node: The current node to swap.
+ * @List: The pointer to the head of the linked list.
+ * Return: The pointer to the node that was swapped.
  */
 listint_t *swap_prev_node(listint_t *Node, listint_t **List)
 {
 	listint_t *back = Node->prev, *current = Node;
-	/*NULL, 19, 48, 9, 71, 13, NULL*/
 
 	back->next = current->next;
 	if (current->next)
@@ -23,21 +23,25 @@ listint_t *swap_prev_node(listint_t *Node, listint_t **List)
 		*List = current;
 	return (current);
 }
+
 /**
- * cocktail_sort_list - This is cocktail type execution
- * working on double linked list
- * @list: list
+ * cocktail_sort_list - Sorts a doubly linked list
+ *			using the Cocktail Shaker sort algorithm.
+ * @list: A pointer to a pointer to the head of the list.
  */
 void cocktail_sort_list(listint_t **list)
 {
 	listint_t *node;
 	int swap_done = 1;
+
 	if (!list || !(*list) || !(*list)->next)
 		return;
 	node = *list;
+
 	while (swap_done == 1)
 	{
 		swap_done = 0;
+
 		while (node->next)
 		{
 			if (node->n > node->next->n)
@@ -48,9 +52,12 @@ void cocktail_sort_list(listint_t **list)
 			}
 			node = node->next;
 		}
+
 		if (swap_done == 0)
 			break;
+
 		swap_done = 0;
+
 		while (node->prev)
 		{
 			if (node->n < node->prev->n)
@@ -64,3 +71,4 @@ void cocktail_sort_list(listint_t **list)
 		}
 	}
 }
+

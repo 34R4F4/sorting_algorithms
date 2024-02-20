@@ -3,7 +3,7 @@
 /**
 * swap - positions of two elements into array
 * @array: array
-* @item1: element array 
+* @item1: element array
 * @item2: element array
 */
 void swap(int *array, int item1, int item2)
